@@ -3,7 +3,6 @@ What is the absolute path to your home directory?
 
 pwd
 
-
 /home/gperez8
 
 Move to the directory /etc command: cd /etc
@@ -18,9 +17,6 @@ command: cd ../var/log/
 answer: ..var/long
 
 
-
-
-..var
 3.	What is the absolute path?
 
  command: /var/log/
