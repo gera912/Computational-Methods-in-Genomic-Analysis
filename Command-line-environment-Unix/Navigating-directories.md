@@ -61,7 +61,7 @@ Move back home – what are three ways to move from home to the root?
 
 What do the following options do (use man command)?
 
-'''
+```
 -1 when using ls command: man ls
 answer: list one file per line
 
@@ -80,4 +80,4 @@ answer: --chop-long-lines Causes lines longer than the screen width to be choppe
 --number when using cat coomand: man cat --number 
 answer: cat - concatenate files and print on the standard output
 
-'''
+```
