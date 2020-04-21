@@ -11,16 +11,21 @@ gzcat mouse_C1.concordant_uniq.sam.gz | grep -v "^@"
 ```
 2.	Extract out the QNAME and sequence for each read.
 ```
-grep -v "^@" mouse_C1.concordant_uniq.sam | cut -f 1,10  
+gzcat mouse_C1.concordant_uniq.sam.gz | grep -v "^@" | cut -f 1,10
 ```
 3.	Construct a ```sed``` expression to match the QNAME and sequence. Use sed to reverse the columns.
 ```
+
+gzcat mouse_C1.concordant_uniq.sam.gz | grep -v "^@" | cut -f 1,10 | gsed -E 's/(NS500.+)      ([ACTGN]+)/\2    \1/'
+
 grep -v "^@" mouse_C1.concordant_uniq.sam | cut -f 1,10 | gsed -E 's/(.+)\t(.+)/\2 \1/'
 
 ```
 
 4.	Use ```sed```/```tr``` to convert the two column input into a FASTA file. Capture that FASTA file.
 ```
+gzcat mouse_C1.concordant_uniq.sam.gz | grep -v "^@" | cut -f 1,10 | sed -E 's/(NS500.+)      ([ACTG]+)/>\1|\2/' | tr "|" "\n" > mouse_C1.fasta
+
 grep -v "^@" mouse_C1.concordant_uniq.sam | cut -f 1,10 | gsed -E 's/(.+)\t(.+)/<\1\n\2/' > mouse_C1.concordant_uniq.fa
 ```
 
