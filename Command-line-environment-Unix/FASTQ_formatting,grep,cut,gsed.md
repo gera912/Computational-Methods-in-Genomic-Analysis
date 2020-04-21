@@ -1,4 +1,4 @@
-Your goal for this assignment is to transform a SAM file (```mouse_C1.concordant_uniq.sam.gz```) into a FASTQ file. Using your knowledge about SAM and FASTQ file formats, craft a single command (probably composed of multiple parts) to make the transformation. Do not unzip the file.
+Your goal for this assignment is to transform a SAM file (```mouse_C1.concordant_uniq.sam.gz```) into a FASTQ file. Using your knowledge about SAM and FASTQ file formats, craft a single command (probably composed of multiple parts) to make the transformation. 
 
 Submit:
 1.	The command you used to generate your FASTQ file
