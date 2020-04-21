@@ -7,7 +7,7 @@ For each instruction, record the *single* command you used.
 
 1.	Extract out the alignment lines (1,000,000 sequences).
 ```
-grep -v "^@" mouse_C1.concordant_uniq.sam
+gzcat mouse_C1.concordant_uniq.sam.gz | grep -v "^@"
 ```
 2.	Extract out the QNAME and sequence for each read.
 ```
