@@ -46,14 +46,14 @@ EEEEEEEEEEEE<EEEEEEEEEEEEEEEEEEEEEAEAEEEAEEEEEEEEE/E6EEEEEEEEAEEEEEEAEE
 
 ``` 
  
-    3. If there is, how can you fix it? If not, how do you know there’s not?
+   3. If there is, how can you fix it? If not, how do you know there’s not?
  
 ``` 
     I would fix the unique issue by adding a line number toward the end of the sequence identifier. Making the sequence identifiers unique. Add  “counter” onto ID line.
  
 ```     
  
-    4. What is the maximum expected value in a quality score?
+   4. What is the maximum expected value in a quality score?
     
 ```    
      gunzip -c mouse_C1.concordant_uniq.sam.gz | grep -v '^@' | cut -f 1,10,11| gsed -E 's/(.+)\t(.+)\t(.+)/@\1\n\2\n\+\n\3/' | gsed -n '4~4p'| grep 'E'| head
@@ -74,7 +74,9 @@ EEEEEEEEEEEE<EEEEEEEEEEEEEEEEEEEEEAEAEEEAEEEEEEEEE/E6EEEEEEEEAEEEEEEAEE
     
      We don't know if its sanger that has I, highest quality score 73 -33 = 40  or illumina that has J at the highest qulaity score 74 - 33 = 41. 
  ``` 
-    5. What ASCII character encodes that value for your FASTQ file?
+ 
+   5. What ASCII character encodes that value for your FASTQ file?
+    
  ```  
    It could be either I (73) for Sanger and J (74) for Illumina
  ``` 
