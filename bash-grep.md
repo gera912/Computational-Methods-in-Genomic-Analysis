@@ -7,11 +7,11 @@ Name:
 
 1.	Count the number of raw reads (answer: 250,000).
 ```
-grep -c "@" s_1_seq.fastq
+grep -c "^@HWI" s_1_seq.fastq
 ```
 2.	Count the number of reads with barcode CGATA (answer: 19,501).
 ```
-grep -c "^@HWI" s_1_seq.fastq
+grep -c "^CGATA"  s_1_seq.fastq
 ```
 3.	Capture all FASTQ records for ACCAT into a file called sample_01.fq (you should get a file with 18,352 records and 73,408 lines).
 
