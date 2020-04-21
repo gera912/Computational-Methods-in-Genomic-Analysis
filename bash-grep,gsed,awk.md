@@ -52,21 +52,27 @@ mouseSaline1_rv.genecount
  ```
     
     
-    3.	Divide by the number of mapping reads by the total number of reads. (feel free to use a calculator)
+ 3.	Divide by the number of mapping reads by the total number of reads. (feel free to use a calculator)
     ```  
     mouseSaline1_fw.genecount  894086/19177391 = 0.04662187885
     
     mouseSaline1_rv.genecount 14442057/19177391 = 0.75307725644
     ```
-    4.	*CHALLENGE* – Condense as many parts as possible to a single line command.
+ 4.	*CHALLENGE* – Condense as many parts as possible to a single line command.
  ```
-        $ cat mouseSaline1_fw.genecount | awk '$1~"ENSMUS" {sum += $2} $1~"__" {count += $2} END {print sum;print count+sum;print sum/(sum+count)}'
-      894086
+     $ cat mouseSaline1_fw.genecount | awk '$1~"ENSMUS" {sum += $2} $1~"__" {count += $2} END {print sum;print count+sum;print      
+     sum/(sum+count)}'
+     894086
+     19177391
+    0.0466219
+  
 
-        $ cat mouseSaline1_rv.genecount | awk '$1~"ENSMUS" {sum += $2} $1~"__" {count += $2} END {print sum;print count+sum;print sum/(sum+count)}'
-        14442057
+     $ cat mouseSaline1_rv.genecount | awk '$1~"ENSMUS" {sum += $2} $1~"__" {count += $2} END {print sum;print       
+     count+sum;print sum/(sum+count)}'
+     14442057
+     19177391
+     0.753077
 ```
-    
     
 4.	Which file had more reads mapping to features?
 ```
