@@ -16,7 +16,7 @@ grep -c "^CGATA"  s_1_seq.fastq
 3.	Capture all FASTQ records for ACCAT into a file called sample_01.fq (you should get a file with 18,352 records and 73,408 lines).
 
 ```
-grep -B 2 -A 1 "^ACCAT" s_1_seq.fastq | grep -v "^--" > sample_01.fq
+grep -A 2 -B 1 "^ACCAT" s_1_seq.fastq | grep -v "^--" > sample_01.fq
 ```
 
 4.	Determine the count of all barcodes in the file. You should get the following counts (plus a bunch more, not shown here to save space):
@@ -41,7 +41,7 @@ grep -B 2 -A 1 "^ACCAT" s_1_seq.fastq | grep -v "^--" > sample_01.fq
 ```
 
 ```
-grep -E ^[ATCGN]{5} s_1_seq.fastq | cut -c 1-5 | sort | uniq -c | sort -n
+cat s_1_seq.fastq | grep -A 1 "^@" | grep "^[A-Z]" | cut -c 1-5 | sort | uniq -c | sort –n
 ```
 
 Some hints:
