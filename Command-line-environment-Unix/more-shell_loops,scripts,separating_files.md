@@ -94,7 +94,7 @@ Script done on Wed Jul  3 19:10:26 2019
 
 >ICA6p6.txt
 
-'''
+```
 Script started on Thu Jul  4 02:10:17 2019
 [?1034hbash-3.2$ cat ICA6p6
 #!/usr/bin/env bash
